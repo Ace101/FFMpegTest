@@ -1,0 +1,11 @@
+fcntl(): Bad file descriptor
+/Users/zhangshihao/AsTest/FFMpegTest2/app/src/main/cpp/native-lib.cpp:22:5: warning: 'av_register_all' is deprecated [-Wdeprecated-declarations]
+    av_register_all();
+    ^
+/Users/zhangshihao/AsTest/FFMpegTest2/app/src/main/cpp/include/libavformat/avformat.h:2049:1: note: 'av_register_all' has been explicitly marked deprecated here
+attribute_deprecated
+^
+/Users/zhangshihao/AsTest/FFMpegTest2/app/src/main/cpp/include/libavutil/attributes.h:100:49: note: expanded from macro 'attribute_deprecated'
+#    define attribute_deprecated __attribute__((deprecated))
+                                                ^
+1 warning generated.

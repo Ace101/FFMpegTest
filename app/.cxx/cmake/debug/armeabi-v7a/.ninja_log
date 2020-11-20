@@ -1,0 +1,4 @@
+# ninja log v5
+0	6	0	clean	daf2b183c4740a75
+0	662	1605756809	CMakeFiles/native-lib.dir/native-lib.cpp.o	8d6014d5fa49e4aa
+663	786	1605756809	/Users/zhangshihao/AsTest/FFMpegTest2/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	83d1d142889df999
