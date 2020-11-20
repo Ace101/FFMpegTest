@@ -28,15 +28,18 @@ public class MainActivity extends AppCompatActivity {
         TextView tv = findViewById(R.id.sample_text);
         tv.setText(stringFromJNI());
 
-        try {
-            File file = new File(Environment.getExternalStorageDirectory(), "wlcc.mp3");
-            url = file.toURI().toURL();
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            File file = new File(Environment.getExternalStorageDirectory(), "wlcc.mp3");
+//            url = file.toURI().toURL();
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();
+//        }
 
-        int i = intOpenInput(url.toString());
-        Log.e("结果", "结果==" + i);
+        String input = new File(Environment.getExternalStorageDirectory(), "wlcc.mp3").getAbsolutePath();
+        String output = new File(Environment.getExternalStorageDirectory(), "wlcc.pcm").getAbsolutePath();
+        intOpenInput(input, output);
+//        int i = intOpenInput(url.toString());
+//        Log.e("结果", "结果==" + i);
     }
 
     /**
@@ -45,5 +48,5 @@ public class MainActivity extends AppCompatActivity {
      */
     public native String stringFromJNI();
 
-    public native int intOpenInput(String url);
+    public native void intOpenInput(String input, String output);
 }
